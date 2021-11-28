@@ -1,0 +1,30 @@
+<div class="container">
+    <h1>Contenido de este Curso</h1>
+    <div class="container" *ngFor="let contenido of contenidos" id="detalles_contenido">
+        <div class="row">
+            <div class="col-3">
+                <div class="card-body">
+                    <iframe id="contenidocurso" src="https://www.youtube.com/embed/HJpEdlzzNSY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+            <div class="col-9">
+                <div class="card-title">
+                    <h2>{{contenido.texto}}:{{contenido.titulo}}</h2>
+
+                </div>
+                <div class="card-text">
+                    {{contenido.descripcion}}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container my-2">
+        <button type="button" class="btn btn btn-secondary">
+            <a [routerLink]="['/cursos']">Buscar otro curso</a>
+        </button>
+        <button type="button" class="btn btn btn-secondary">
+            <a [routerLink]="['/cursoIndividual']">Comenzar este curso</a>
+        </button>
+    </div>
+</div>

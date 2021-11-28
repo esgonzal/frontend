@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8">
+            contenido de curso
+        </div>
+        <div class="col-lg-4">
+            <div id="caja_escribir_comentario">
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Escribe un comentario" aria-label="Search">
+                </form>
+            </div>
+            <div class="container" *ngFor="let comentario of comentarios" id="otros_comentarios">
+                <p>{{comentario.autor}}</p>
+                <p style="font-size: small;">{{comentario.contenido}}</p>
+            </div>
+        </div>
+    </div>
+</div>
